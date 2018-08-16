@@ -29,7 +29,7 @@ module.exports = function (app) {
             }
             return total;
         }
-
+        var newFriends = (req.body);
         var userTotal = sum(req.body.scores);
 
         var friendTotal = 0;
@@ -55,6 +55,7 @@ module.exports = function (app) {
                 };
             };
         };
+        friendsList.push(newFriends);
         res.json(bestMatch);
     });
 };
